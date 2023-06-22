@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="@@base@@" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+    <link rel="stylesheet" href="engine/main.css" />
+    <link rel="stylesheet" href="theme/evilmartians.css" />
+    <link rel="stylesheet" href="engine/katex/katex.min.css" />
+
+<style>
+      @font-face {
+  font-family: Martian Grotesk;
+  font-display: swap;
+  src: url('https://cdn.evilmartians.com/front/fonts/MartianGrotesk.woff2') format('woff2');
+  font-weight: 100 1000;
+  font-stretch: 75% 200%;
+}
+
+
+@font-face {
+  font-family: Martian Mono;
+  font-display: swap;
+  src: url('https://cdn.evilmartians.com/front/fonts/MartianMono.woff2') format('woff2');
+  font-weight: 100 800;
+  font-stretch: 75% 112.5%;
+}
+
+    :root{
+--logo: ;
+--darkaccent1color: ;
+--lightaccent1color: ;
+--accent2: ;
+--accent3: ;
+--accent4: ;
+--accent5: ;
+--accent6: ;
+--lighttitletextcolor: ;
+--darktitletextcolor: #2d2d2d;
+--lightbodytextcolor: ;
+--darkbodytextcolor: #000000;
+--lightbackgroundcolor: #feffff;
+--darkbackgroundcolor: ;
+--bodyfont: Martian Grotesk;
+--titlefont: Martian Grotesk;
+} 
+
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="engine/print.css"
+      media="print"
+    />
+  </head>
+
+  <body class="responsive">
+    <div class="reveal">
+      <div class="slides"><section class="cover-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 1rem;">
+        <div style=""><h1 id="futureof&nbsp;colorsontheweb">Future of&nbsp;colors on the Web</h1>
+
+<h5 id="byalexeyivanov">by Alexey Ivanov</h5></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="full-image-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/01_Evil-Martians_Logo_v2.1_RGB.svg" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="has-background-image default-container present has-light-background fitted" data-background-image="images/projects.svg" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="clients">Clients</h4></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="has-background-image default-container present has-light-background fitted" data-background-image="images/oss.svg" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="opensource">Open Source</h4></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="title-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="letstalkaboutcolors">Let's talk about colors</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="v-split-container present fit-warning has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.531rem;">
+        <div style=""><h4 id="colorspaces">Color spaces</h4>
+
+<h3 id="colorsthatpeoplecansee">Colors that people can see</h3></div>
+        <div style=""><div class="single-image-wrapper"><img src="images/CIE1931xy_blank.svg" class=" size-contain position-center-center"></div>
+
+<p>https://commons.wikimedia.org/wiki/</p>
+
+<p>File:CIExy1931.svg</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="v-split-container present fit-warning has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.578rem;">
+        <div style=""><h4 id="colorspaces">Color spaces</h4>
+
+<h3 id="srgb">sRGB</h3></div>
+        <div style=""><div class="single-image-wrapper"><img src="images/SRGB_chromaticity_CIE1931.svg" class=" size-contain position-center-center"></div>
+
+<p>https://en.wikipedia.org/wiki/</p>
+
+<p>File:SRGB_chromaticity_CIE1931.svg</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="v-split-container present fit-warning has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.578rem;">
+        <div style=""><h4 id="colorspaces">Color spaces</h4>
+
+<h3 id="display-p3">display-p3</h3></div>
+        <div style=""><div class="single-image-wrapper"><img src="images/CIE%201931%20xyY%20Gamut%20Comparison.svg" class=" size-contain position-center-center"></div>
+
+<p>https://en.wikipedia.org/wiki/</p>
+
+<p>File:CIE1931xy_gamut_comparison_</p>
+
+<p>of_sRGB_P3_Rec2020.svg</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="devicesupport">Device support</h4>
+
+<ul>
+<li>Apple devices released after 2016.</li>
+<li>Modern Android phones.</li>
+<li>Professional displays.</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="title-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="coolsohowcanweusethem">Cool, so how can we use them?</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="section-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="csscolormodule&nbsp;level&nbsp;3">CSS Color Module&nbsp;Level&nbsp;3</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><p><code class="hljs coq"><span class="hljs-built_in">red</span></code></p>
+
+<p><code class="hljs vala"><span class="hljs-meta">#ff0000</span></code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">rgb</span>(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">rgba</span>(<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>, <span class="hljs-number">100</span>%)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100</span>%, <span class="hljs-number">50</span>%)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100</span>%, <span class="hljs-number">50</span>%, <span class="hljs-number">100</span>%)</code></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="v-split-container present fit-warning has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.578rem;">
+        <div style=""><h2 id="rgb25500">rgb(255, 0, 0)</h2>
+
+<p><span class="cw" style="--color: #f00">red 0-255</span></p>
+
+<p><span class="cw" style="--color: #0f0">green 0-255</span></p>
+
+<p><span class="cw" style="--color: #00f">blue 0-255</span></p></div>
+        <div style=""><div class="single-image-wrapper"><img src="images/CIE%201931%20xyY%20Gamut%20Comparison.svg" class=" size-contain position-center-center"></div>
+
+<p>https://en.wikipedia.org/wiki/</p>
+
+<p>File:CIE1931xy_gamut_comparison_</p>
+
+<p>of_sRGB_P3_Rec2020.svg</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="section-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="csscolormodule&nbsp;level&nbsp;4">CSS Color Module&nbsp;Level&nbsp;4</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="v-split-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><p>Old and improved:</p>
+
+<p><code class="hljs vala"><span class="hljs-meta">#FF000000</span></code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">rgb</span>(<span class="hljs-number">0</span> <span class="hljs-number">255</span> <span class="hljs-number">0</span> / <span class="hljs-number">1</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">hsl</span>(<span class="hljs-number">0</span> <span class="hljs-number">100</span>% <span class="hljs-number">50</span>% / <span class="hljs-number">1</span>)</code></p></div>
+        <div style=""><p>New:</p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">hwb</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span>% <span class="hljs-number">0</span>%)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">color</span>(sRGB <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">color</span>(display-p<span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">92</span> <span class="hljs-number">0</span>.<span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">14</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">lab</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">80</span>.<span class="hljs-number">8</span> <span class="hljs-number">69</span>.<span class="hljs-number">89</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">lch</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">106</span>.<span class="hljs-number">84</span> <span class="hljs-number">40</span>.<span class="hljs-number">86</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">oklab</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">22</span> <span class="hljs-number">0</span>.<span class="hljs-number">13</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">26</span> <span class="hljs-number">30</span>)</code></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="browsersupport">Browser support</h4>
+
+<div class="single-image-wrapper"><img src="images/Screen%20Shot%202023-06-16%20at%2022.45.49.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="title-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="sowhichoneto&nbsp;choose">So, which one to&nbsp;choose?</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="v-split-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><p>Old and improved:</p>
+
+<p><del><code class="hljs vala"><span class="hljs-meta">#FF000000</span></code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">rgb</span>(<span class="hljs-number">0</span> <span class="hljs-number">255</span> <span class="hljs-number">0</span> / <span class="hljs-number">1</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hsl</span>(<span class="hljs-number">0</span> <span class="hljs-number">100</span>% <span class="hljs-number">50</span>% / <span class="hljs-number">1</span>)</code></del></p></div>
+        <div style=""><p>New:</p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hwb</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span>% <span class="hljs-number">0</span>%)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">color</span>(sRGB <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)</code></del></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">color</span>(display-p<span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">92</span> <span class="hljs-number">0</span>.<span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">14</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">lab</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">80</span>.<span class="hljs-number">8</span> <span class="hljs-number">69</span>.<span class="hljs-number">89</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">lch</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">106</span>.<span class="hljs-number">84</span> <span class="hljs-number">40</span>.<span class="hljs-number">86</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">oklab</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">22</span> <span class="hljs-number">0</span>.<span class="hljs-number">13</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">26</span> <span class="hljs-number">30</span>)</code></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="v-split-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><p>Old and improved:</p>
+
+<p><del><code class="hljs vala"><span class="hljs-meta">#FF000000</span></code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">rgb</span>(<span class="hljs-number">0</span> <span class="hljs-number">255</span> <span class="hljs-number">0</span> / <span class="hljs-number">1</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hsl</span>(<span class="hljs-number">0</span> <span class="hljs-number">100</span>% <span class="hljs-number">50</span>% / <span class="hljs-number">1</span>)</code></del></p></div>
+        <div style=""><p>New:</p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hwb</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span>% <span class="hljs-number">0</span>%)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">color</span>(sRGB <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)</code></del></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">color</span>(display-p<span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">92</span> <span class="hljs-number">0</span>.<span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">14</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">lab</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">80</span>.<span class="hljs-number">8</span> <span class="hljs-number">69</span>.<span class="hljs-number">89</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">lch</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">106</span>.<span class="hljs-number">84</span> <span class="hljs-number">40</span>.<span class="hljs-number">86</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">oklab</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">22</span> <span class="hljs-number">0</span>.<span class="hljs-number">13</span>)</code></p>
+
+<p><strong><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">26</span> <span class="hljs-number">30</span>)</code></strong></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="title-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="colorquiz">Color quiz</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="section-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="spanclasscwrgb1209085span"><span class="cw">rgb(120 90 85)</span></h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="section-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="spanclasscwstyle--color:rgb1209085rgb1209085span"><span class="cw" style="--color: rgb(120 90 85)">rgb(120 90 85)</span></h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="section-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="spanclasscwrgb75130240span"><span class="cw">rgb(75 130 240)</span></h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="section-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="spanclasscwstyle--color:rgb75130240rgb75130240span"><span class="cw" style="--color: rgb(75 130 240)">rgb(75 130 240)</span></h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="section-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="spanclasscwrgb155104103span"><span class="cw">rgb(155 104 103)</span></h3>
+
+<h3 id="spanclasscwrgb16025250span"><span class="cw">rgb(160 25 250)</span></h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="section-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="spanclasscwstyle--color:rgb155104103rgb155104103span"><span class="cw" style="--color: rgb(155 104 103)">rgb(155 104 103)</span></h3>
+
+<h3 id="spanclasscwstyle--color:rgb16025250rgb16025250span"><span class="cw" style="--color: rgb(160 25 250)">rgb(160 25 250)</span></h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="title-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="ifwecanreadcolorswecandocoolthings">If we can read colors, we can do cool things</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h4 id="whatcolorsarereadable">What colors are readable</h4>
+
+<ul>
+<li>Human-readable axis (lightness instead of the amount of red).</li>
+<li>All axes should be independent. Changing the value of a hue’s axis color should maintain the same level of contrast. Saturation changes should not change hue.</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="section-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="exampleofunpredictablecolorchanges">Example of unpredictable color changes</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="section-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="hsl010050">hsl(0 100% 50%)</h3>
+
+<p><strong>hue</strong> - 0-360</p>
+
+<p><strong>saturation</strong> - 0%-100%</p>
+
+<p><strong>lightness</strong> - 0%-100%</p>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="full-image-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/Clipboard_2.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="v-split-container present fit-warning has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.578rem;">
+        <img src="images/hsl.png" class=" size-contain position-center-center" style="">
+        <div style=""><div class="single-image-wrapper"><img src="images/SRGB_chromaticity_CIE1931.svg" class=" size-contain position-center-center"></div>
+
+<p>https://en.wikipedia.org/wiki/</p>
+
+<p>File:SRGB_chromaticity_CIE1931.svg</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="full-image-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/hsl-vs-oklch.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="full-image-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/Clipboard_1.png" class=" position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="v-split-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><p>Old and improved:</p>
+
+<p><del><code class="hljs vala"><span class="hljs-meta">#FF000000</span></code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">rgb</span>(<span class="hljs-number">0</span> <span class="hljs-number">255</span> <span class="hljs-number">0</span> / <span class="hljs-number">1</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hsl</span>(<span class="hljs-number">0</span> <span class="hljs-number">100</span>% <span class="hljs-number">50</span>% / <span class="hljs-number">1</span>)</code></del></p></div>
+        <div style=""><p>New:</p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hwb</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span>% <span class="hljs-number">0</span>%)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">color</span>(sRGB <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)</code></del></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">color</span>(display-p<span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">92</span> <span class="hljs-number">0</span>.<span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">14</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">lab</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">80</span>.<span class="hljs-number">8</span> <span class="hljs-number">69</span>.<span class="hljs-number">89</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">lch</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">106</span>.<span class="hljs-number">84</span> <span class="hljs-number">40</span>.<span class="hljs-number">86</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">oklab</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">22</span> <span class="hljs-number">0</span>.<span class="hljs-number">13</span>)</code></p>
+
+<p><strong><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">26</span> <span class="hljs-number">30</span>)</code></strong></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="v-split-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><p>Old and improved:</p>
+
+<p><del><code class="hljs vala"><span class="hljs-meta">#FF000000</span></code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">rgb</span>(<span class="hljs-number">0</span> <span class="hljs-number">255</span> <span class="hljs-number">0</span> / <span class="hljs-number">1</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hsl</span>(<span class="hljs-number">0</span> <span class="hljs-number">100</span>% <span class="hljs-number">50</span>% / <span class="hljs-number">1</span>)</code></del></p></div>
+        <div style=""><p>New:</p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hwb</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span>% <span class="hljs-number">0</span>%)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">color</span>(sRGB <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">color</span>(display-p<span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">92</span> <span class="hljs-number">0</span>.<span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">14</span>)</code></del></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">lab</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">80</span>.<span class="hljs-number">8</span> <span class="hljs-number">69</span>.<span class="hljs-number">89</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">lch</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">106</span>.<span class="hljs-number">84</span> <span class="hljs-number">40</span>.<span class="hljs-number">86</span>)</code></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">oklab</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">22</span> <span class="hljs-number">0</span>.<span class="hljs-number">13</span>)</code></p>
+
+<p><strong><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">26</span> <span class="hljs-number">30</span>)</code></strong></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="title-image-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+        <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+        <div class="layout-title-image media-grid" style="width: 100%; font-size: 1rem;">
+          <div style=""><h4 id="lchandlabvsoklchandoklab">lch() and lab() VS oklch() and oklab()</h4></div>
+          <img src="images/Clipboard_4.png" class=" size-contain position-center-center" style="">
+        </div>
+        <div class="footnotes"></div>
+        <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="v-split-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><p>Old and improved:</p>
+
+<p><del><code class="hljs vala"><span class="hljs-meta">#FF000000</span></code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">rgb</span>(<span class="hljs-number">0</span> <span class="hljs-number">255</span> <span class="hljs-number">0</span> / <span class="hljs-number">1</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hsl</span>(<span class="hljs-number">0</span> <span class="hljs-number">100</span>% <span class="hljs-number">50</span>% / <span class="hljs-number">1</span>)</code></del></p></div>
+        <div style=""><p>New:</p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hwb</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span>% <span class="hljs-number">0</span>%)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">color</span>(sRGB <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">color</span>(display-p<span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">92</span> <span class="hljs-number">0</span>.<span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">14</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">lab</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">80</span>.<span class="hljs-number">8</span> <span class="hljs-number">69</span>.<span class="hljs-number">89</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">lch</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">106</span>.<span class="hljs-number">84</span> <span class="hljs-number">40</span>.<span class="hljs-number">86</span>)</code></del></p>
+
+<p><code class="hljs apache"><span class="hljs-attribute">oklab</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">22</span> <span class="hljs-number">0</span>.<span class="hljs-number">13</span>)</code></p>
+
+<p><strong><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">26</span> <span class="hljs-number">30</span>)</code></strong></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="grid-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-grid grid-items-3" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="oklab">oklab()</h4>
+
+<p><strong>lightness</strong> – 0%-100%</p>
+
+<p><strong>a</strong> – 0-1, cartesian coordinates between green and red.</p>
+
+<p><strong>b</strong> – 0-1, cartesian coordinates between blue and yellow.</p></div><div style=""><h4 id="oklch">oklch()</h4></div><div style=""><p><strong>lightness</strong> – 0%-100%</p>
+
+<p><strong>chroma</strong> – 0 to infinity.</p>
+
+<p><strong>hue</strong> – 0-360.</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="full-image-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/Clipboard_3.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="v-split-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><p>Old and improved:</p>
+
+<p><del><code class="hljs vala"><span class="hljs-meta">#FF000000</span></code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">rgb</span>(<span class="hljs-number">0</span> <span class="hljs-number">255</span> <span class="hljs-number">0</span> / <span class="hljs-number">1</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hsl</span>(<span class="hljs-number">0</span> <span class="hljs-number">100</span>% <span class="hljs-number">50</span>% / <span class="hljs-number">1</span>)</code></del></p></div>
+        <div style=""><p>New:</p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">hwb</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span>% <span class="hljs-number">0</span>%)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">color</span>(sRGB <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">color</span>(display-p<span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">92</span> <span class="hljs-number">0</span>.<span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">14</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">lab</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">80</span>.<span class="hljs-number">8</span> <span class="hljs-number">69</span>.<span class="hljs-number">89</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">lch</span>(<span class="hljs-number">54</span>.<span class="hljs-number">29</span> <span class="hljs-number">106</span>.<span class="hljs-number">84</span> <span class="hljs-number">40</span>.<span class="hljs-number">86</span>)</code></del></p>
+
+<p><del><code class="hljs apache"><span class="hljs-attribute">oklab</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">22</span> <span class="hljs-number">0</span>.<span class="hljs-number">13</span>)</code></del></p>
+
+<p><strong><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">62</span>.<span class="hljs-number">8</span>% <span class="hljs-number">0</span>.<span class="hljs-number">26</span> <span class="hljs-number">30</span>)</code></strong></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h3 id="tldr">TLDR</h3>
+
+<ol>
+<li>New displays support more colors than the old ones.</li>
+<li>To declare new colors, we need new formats.</li>
+<li>The <code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">oklch</span><span class="hljs-params">()</span></span></code> is one of these formats and is the easiest for people to read and modify.</li>
+</ol></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="title-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="oklchfordesigners">OKLCH for designers</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="v-split-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h4 id="complimentarycolors">Complimentary colors</h4>
+<div style="display: flex; flex-wrap: wrap; gap: 0.5em;"><div class="circle" style="--color: oklch(75% 0.1 60)">A</div><div class="circle" style="--color: oklch(75% 0.1 120)">B</div><div class="circle" style="--color: oklch(75% 0.1 180)">C</div><div class="circle" style="--color: oklch(75% 0.1 240)">D</div><div class="circle" style="--color: oklch(75% 0.1 300)">E</div><div class="circle" style="--color: oklch(75% 0.1 360)">F</div></div></div>
+        <div style=""><p><span class="cw" style="--color: oklch(75% 0.1 60)"><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">75</span>% <span class="hljs-number">0</span>.<span class="hljs-number">1</span> <span class="hljs-number">60</span>)</code></span></p>
+
+<p><span class="cw" style="--color: oklch(75% 0.1 120)"><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">75</span>% <span class="hljs-number">0</span>.<span class="hljs-number">1</span> <span class="hljs-number">120</span>)</code></span></p>
+
+<p><span class="cw" style="--color: oklch(75% 0.1 180)"><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">75</span>% <span class="hljs-number">0</span>.<span class="hljs-number">1</span> <span class="hljs-number">180</span>)</code></span></p>
+
+<p><span class="cw" style="--color: oklch(75% 0.1 240)"><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">75</span>% <span class="hljs-number">0</span>.<span class="hljs-number">1</span> <span class="hljs-number">240</span>)</code></span></p>
+
+<p><span class="cw" style="--color: oklch(75% 0.1 300)"><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">75</span>% <span class="hljs-number">0</span>.<span class="hljs-number">1</span> <span class="hljs-number">300</span>)</code></span></p>
+
+<p><span class="cw" style="--color: oklch(75% 0.1 360)"><code class="hljs apache"><span class="hljs-attribute">oklch</span>(<span class="hljs-number">75</span>% <span class="hljs-number">0</span>.<span class="hljs-number">1</span> <span class="hljs-number">380</span>)</code></span></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="buttons">Buttons</h4>
+<div class="btn" style="--bg: oklch(50% 0.3 135);">Button A</div>
+<div class="btn" style="--bg: oklch(50% 0.3 30);">Button B</div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="grid-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-grid grid-items-4" style="width: 100%; font-size: 1rem;">
+        <div style=""><p>Normal:</p>
+
+<p>Hovered:</p>
+
+<p>Disabled:</p></div><div style=""><div class="btn" style="--bg: oklch(50% 0.3 135);">oklch(50% 0.3 135)</div>
+<div class="btn" style="--bg: oklch(60% 0.3 135)">oklch(60% 0.3 135)</div>
+<div class="btn" style="--bg: oklch(80% 0.1 135)">oklch(80% 0.1 135)</div></div><div style=""><p>Normal:</p>
+
+<p>Hovered:</p>
+
+<p>Disabled:</p></div><div style=""><div style="width: 100%; text-align: center; border-radius: 0.25em; padding: 0.2em 0.5em; background: oklch(50% 0.3 30); color: white;">oklch(50% 0.3 30)</div>
+<div style="width: 100%; text-align: center; border-radius: 0.25em; padding: 0.2em 0.5em; background: oklch(60% 0.3 30); color: white;">oklch(60% 0.3 30)</div>
+<div style="width: 100%; text-align: center; border-radius: 0.25em; padding: 0.2em 0.5em; background: oklch(80% 0.1 30); color: white;">oklch(80% 0.1 30)</div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="v-split-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="flatcolors">Flat colors</h4>
+
+<div class="single-image-wrapper"><img src="images/Frame%20326.svg" class=" size-contain position-center-center"></div></div>
+        <div style=""><h4 id="contrastcolors">Contrast colors</h4>
+
+<div class="single-image-wrapper"><img src="images/Frame%20325.svg" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="v-split-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="flatcolors">Flat colors</h4>
+
+<div class="single-image-wrapper"><img src="images/image%20194.png" class=" size-contain position-center-center"></div></div>
+        <div style=""><h4 id="contrastcolors">Contrast colors</h4>
+
+<div class="single-image-wrapper"><img src="images/image%20193.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="riskcolorscheme">Risk color scheme</h4>
+
+<div class="single-image-wrapper"><img src="images/Group%201.svg" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="riskcolorscheme">Risk color scheme</h4>
+
+<div class="single-image-wrapper"><img src="images/Frame%20347.svg" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="https:oklch.com"><a href="https://oklch.com/">https://oklch.com/</a></h4>
+
+<div class="single-image-wrapper"><img src="images/Clipboard.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="title-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="demo">DEMO</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="title-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="oklchforfronteders">OKLCH for fronteders</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h4 id="checkingthesupport">Checking the support</h4>
+
+<pre><code class="hljs css"><span class="hljs-selector-class">.martian</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">oklch</span>(<span class="hljs-number">69.73%</span> <span class="hljs-number">0.155</span> <span class="hljs-number">112.79</span>);
+}
+<span class="hljs-keyword">@media</span> (<span class="hljs-attribute">color-gamut</span>: p3) {
+  <span class="hljs-selector-class">.martian</span> {
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">oklch</span>(<span class="hljs-number">69.73%</span> <span class="hljs-number">0.176</span> <span class="hljs-number">112.79</span>);
+    <span class="hljs-comment">/* You'll only see the preview with P3 monitors */</span>
+  }
+}
+</code></pre></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="gradients">Gradients</h4>
+
+<pre><code class="hljs css"><span class="hljs-selector-class">.oklch</span> {
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(in oklab, blue, green);
+}
+</code></pre></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="gradients">Gradients</h3>
+
+<div class="single-image-wrapper"><img src="images/Clipboard_5.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="default-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="polyfils">Polyfils</h4>
+
+<ul>
+<li>@csstools/postcss-oklab-function</li>
+<li>postcss-preset-env</li>
+<li>Lightning CSS</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="section-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h4 id="bonus">Bonus</h4>
+
+<h3 id="csscolormodule&nbsp;level&nbsp;5">CSS Color Module&nbsp;Level&nbsp;5</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="default-container present fit-warning has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.625rem;">
+        <div style=""><h4 id="colormodificationswithcss">Color modifications with CSS</h4>
+
+<pre><code class="hljs css"><span class="hljs-selector-class">.button</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--button-color);
+}
+<span class="hljs-selector-class">.button</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-comment">/* One :hover for normal, secondary, and error states */</span>
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">oklch</span>(from <span class="hljs-built_in">var</span>(--button-color) <span class="hljs-built_in">calc</span>(l + <span class="hljs-number">10%</span>) c h);
+}
+
+<span class="hljs-selector-class">.button</span> {
+  --<span class="hljs-selector-tag">button</span>-<span class="hljs-attribute">color</span>:   <span class="hljs-built_in">var</span>(--accent);
+}
+<span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.is-secondary</span> {
+  --<span class="hljs-selector-tag">button</span>-<span class="hljs-attribute">color</span>:   <span class="hljs-built_in">var</span>(--dimmed);
+}
+<span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.is-error</span> {
+  --<span class="hljs-selector-tag">button</span>-<span class="hljs-attribute">color</span>:   <span class="hljs-built_in">var</span>(--error);
+}
+</code></pre></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="default-container present fit-warning has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.719rem;">
+        <div style=""><h4 id="resources">Resources</h4>
+
+<ul>
+<li><a href="https://oklch.com/">https://oklch.com/</a></li>
+<li><a href="https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl">https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl</a></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="title-container present has-light-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="thanks">Thanks!</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section></div>
+    </div>
+    <script src="engine/index.js"></script>
+    <!--<script src="engine/d3v4.min.js" charset="utf-8"></script>
+    <script src="engine/charts.min.js" charset="utf-8"></script>
+    <script src="engine/billboard.min.js"></script>-->
+    <script src="engine/pptxgen.min.js"></script>
+                                                   <script src="engine/pfill.js"></script>
+    <script src="engine/published.js"></script>
+
+    <script>
+      Reveal.configure({
+        progress: true,
+        keyboard: true,
+        dependencies: [
+          {
+            src: "engine/highlight.js",
+            sync: true,
+            callback: function () {
+              hljs.initHighlightingOnLoad();
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>
